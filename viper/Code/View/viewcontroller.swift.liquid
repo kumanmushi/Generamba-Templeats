@@ -1,0 +1,31 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+final class {{ module_info.name }}ViewController: UIViewController {
+
+    private var presenter: {{ module_info.name }}PresenterInput!
+
+    // MARK: Life cycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    // MARK: Instance method
+
+    func inject(presenter: {{ module_info.name }}PresenterInput) {
+        self.presenter = presenter
+    }
+}
+
+// MARK: {{module_info.name}}PresenterOutput
+
+extension {{ module_info.name }}ViewController: {{module_info.name}}PresenterOutput {
+}
